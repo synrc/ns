@@ -1,0 +1,9 @@
+{application, ns,
+ [
+  {description, "NS Name Server"},
+  {vsn, "0.9.0"},
+  {registered, []},
+  {applications, [kernel,stdlib]},
+  {mod, { ns, []}},
+  {env, []}
+ ]}.
