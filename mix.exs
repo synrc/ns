@@ -28,7 +28,7 @@ defmodule NS.Mixfile do
 
   def deps() do
     [
-      {:dns, github: "voxox/dns_erlang"},
+      {:dnssec, "~> 0.1.0"},
       {:ex_doc, "~> 0.11", only: :dev}
     ]
   end
