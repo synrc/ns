@@ -80,7 +80,15 @@
                 "type": "TXT",
                 "ttl": 3600,
                 "data": {
-                    "txt": "\"Welcome to SYNRC!\""
+                    "txt": "\"01 --- ERP.UNO and N2O.DEV sites for details.\""
+                }
+            },
+            {
+                "name": "synrc.com",
+                "type": "TXT",
+                "ttl": 3600,
+                "data": {
+                    "txt": "\"00 --- Welcome to SYNRC!\""
                 }
             },
             {
