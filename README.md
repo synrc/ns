@@ -4,7 +4,7 @@
 
 ## Installation
 
-```erlang
+```elixir
 $ rebar3 get-deps
 $ rebar3 shell
 ```
