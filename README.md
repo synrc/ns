@@ -4,10 +4,14 @@
 
 ## Installation
 
+Erlang:
+
 ```elixir
 $ rebar3 get-deps
 $ rebar3 shell
 ```
+
+Elixir:
 
 ```elixir
 $ mix deps.get
