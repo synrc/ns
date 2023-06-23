@@ -18,7 +18,7 @@ $ mix deps.get
 $ iex -S mix
 ```
 
-## Client Invokation
+## Client Invocation
 
 ```sh
 $ dig -p 8053 @127.0.0.1 example.com a
