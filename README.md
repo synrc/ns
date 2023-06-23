@@ -2,6 +2,9 @@
 
 [![Hex pm](http://img.shields.io/hexpm/v/ns.svg?style=flat)](https://hex.pm/packages/ns)
 
+<img width="726" alt="Screenshot 2023-06-23 at 15 47 14" src="https://github.com/synrc/ns/assets/144776/61e3aebd-a200-4fb0-977a-2445e22ccf83">
+
+
 ## Installation
 
 Erlang:
