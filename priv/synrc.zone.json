@@ -1,14 +1,14 @@
 [
     {
-        "name": "example.com",
+        "name": "synrc.com",
         "records": [
             {
-                "name": "example.com",
+                "name": "synrc.com",
                 "type": "SOA",
                 "ttl": 3600,
                 "data": {
-                    "mname": "ns1.example.com",
-                    "rname": "admin.example.com",
+                    "mname": "ns1.synrc.com",
+                    "rname": "admin.synrc.com",
                     "serial": 2013022001,
                     "refresh": 86400,
                     "retry": 7200,
@@ -17,15 +17,15 @@
                 }
             },
             {
-                "name": "example.com",
+                "name": "synrc.com",
                 "type": "A",
                 "ttl": 3600,
                 "data": {
-                    "ip": "7.8.9.4"
+                    "ip": "172.67.185.234"
                 }
             },
             {
-                "name": "example.com",
+                "name": "synrc.com",
                 "type": "AAAA",
                 "ttl": 3600,
                 "data": {
@@ -33,73 +33,73 @@
                 }
             },
             {
-                "name": "example.com",
+                "name": "synrc.com",
                 "type": "CAA",
                 "ttl": 3600,
                 "data": {
                     "flags": 0,
                     "tag": "issue",
-                    "value": "example.net"
+                    "value": "n2o.dev"
                 }
             },
             {
-                "name": "www.example.com",
+                "name": "www.synrc.com",
                 "type": "CNAME",
                 "ttl": 120,
                 "data": {
-                    "dname": "example.com"
+                    "dname": "synrc.com"
                 }
             },
             {
-                "name": "example.com",
+                "name": "synrc.com",
                 "type": "MX",
                 "ttl": 3600,
                 "data": {
                     "preference": 10,
-                    "exchange": "mail.example.com"
+                    "exchange": "mail.synrc.com"
                 }
             },
             {
-                "name": "example.com",
+                "name": "synrc.com",
                 "type": "NS",
                 "ttl": 3600,
                 "data": {
-                    "dname": "ns1.example.com"
+                    "dname": "ns1.synrc.com"
                 }
             },
             {
-                "name": "example.com",
+                "name": "synrc.com",
                 "type": "NS",
                 "ttl": 3600,
                 "data": {
-                    "dname": "ns2.example.com"
+                    "dname": "ns2.synrc.com"
                 }
             },
             {
-                "name": "example.com",
+                "name": "synrc.com",
                 "type": "TXT",
                 "ttl": 3600,
                 "data": {
-                    "txt": "\"Hi, this is some text\""
+                    "txt": "\"Welcome to SYNRC!\""
                 }
             },
             {
-                "name": "_ldap._tcp.example.com",
+                "name": "_ldap._tcp.synrc.com",
                 "type": "SRV",
                 "ttl": 3600,
                 "data": {
                     "priority": 0,
                     "weight": 100,
                     "port": 389,
-                    "target": "ldap.example.com"
+                    "target": "ldap.synrc.com"
                 }
             },
             {
-                "name": "ldap.example.com",
+                "name": "ldap.synrc.com",
                 "type": "A",
                 "ttl": 3600,
                 "data": {
-                    "ip": "50.40.50.40"
+                    "ip": "172.67.185.234"
                 }
             }
 

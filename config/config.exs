@@ -1,12 +1,12 @@
 use Mix.Config
 
 config :erldns,
-  servers: [[{:name, :inet_localhost_1}, {:address, '127.0.0.1'}, {:port, 8053}, {:family, :inet}, {:processes, 2}],
+  servers: [[{:name, :inet_localhost_1}, {:address, '0.0.0.0'}, {:port, 8053}, {:family, :inet}, {:processes, 2}],
             [{:name, :inet6_localhost_1}, {:address, '::1'}, {:port, 8053}, {:family, :inet6}]],
   dnssec: [{:enabled, true}],
   use_root_hints: false,
   catch_exceptions: false,
-  zones: 'priv/example.zone.json',
+  zones: 'priv/synrc.zone.json',
   pools: [{:tcp_worker_pool, :erldns_worker, [{:size, 10},{:max_overflow, 20}]}],
   logger_level: :info,
   logger: [{:handler, :default, :logger_std_h,

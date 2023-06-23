@@ -51,30 +51,35 @@
         <section>
           <h3>DIG</h3>
           <figure>
-          <code> $ dig -p 8053 @127.0.0.1 example.com a
+          <code> $  dig -p 8053 @ns.n2o.dev synrc.com any +dnssec
 
-; <<>> DiG 9.10.6 <<>> -p 8053 @127.0.0.1 example.com a
+; <<>> DiG 9.10.6 <<>> -p 8053 @127.0.0.1 synrc.com any +dnssec
 ; (1 server found)
 ;; global options: +cmd
 ;; Got answer:
 ;; -&gt;&gt;HEADER&lt;&lt;&lt;- opcode: QUERY, status: NOERROR, id: 33609
-;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; flags: qr aa rd; QUERY: 1, ANSWER: 8, AUTHORITY: 0, ADDITIONAL: 1
 ;; WARNING: recursion requested but not available
 
 ;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 4096
+; EDNS: version: 0, flags: do; udp: 4096
 ;; QUESTION SECTION:
-;example.com.           IN  A
+;synrc.com.         IN  ANY
 
 ;; ANSWER SECTION:
-example.com.        3600    IN  A   7.8.9.4
+synrc.com.      3600    IN  A   172.67.185.234
+synrc.com.      3600    IN  NS  ns1.synrc.com.
+synrc.com.      3600    IN  NS  ns2.synrc.com.
+synrc.com.      3600    IN  SOA ns1.synrc.com. 2013022001 86400 7200 604800 300
+synrc.com.      3600    IN  MX  10 mail.synrc.com.
+synrc.com.      3600    IN  TXT "Welcome to SYNRC!"
+synrc.com.      3600    IN  AAAA    2001:6a8:0:1:210:4bff:fe4b:4c61
+synrc.com.      3600    IN  CAA 0 issue "n2o.dev"
 
 ;; Query time: 0 msec
 ;; SERVER: 127.0.0.1#8053(127.0.0.1)
-;; WHEN: Fri Jun 23 08:31:29 EEST 2023
-;; MSG SIZE  rcvd: 56
-
-mac:~ maxim$ dig -p 8053 @127.0.0.1 example.com a</code>
+;; WHEN: Fri Jun 23 13:18:38 EEST 2023
+;; MSG SIZE  rcvd: 74</code>
           </figure>
    <br><center>&dot;</center>
            </section>
