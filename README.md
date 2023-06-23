@@ -21,16 +21,15 @@ $ iex -S mix
 ## Client Invocation
 
 ```sh
-$ dig -p 8053 @127.0.0.1 example.com a
-$ dig -p 8053 @127.0.0.1 example.com cname
-$ dig -p 8053 @127.0.0.1 example.com ns
-$ dig -p 8053 @127.0.0.1 example.com mx
-$ dig -p 8053 @127.0.0.1 example.com spf
-$ dig -p 8053 @127.0.0.1 example.com txt
-$ dig -p 8053 @127.0.0.1 example.com sshfp
-$ dig -p 8053 @127.0.0.1 example.com soa
-$ dig -p 8053 @127.0.0.1 example.com naptr
-$ dig -p 8053 @127.0.0.1 -x 127.0.0.1 ptr
+$ dig -p 8053 @127.0.0.1 synrc.com a
+$ dig -p 8053 @127.0.0.1 synrc.com cname
+$ dig -p 8053 @127.0.0.1 synrc.com ns
+$ dig -p 8053 @127.0.0.1 synrc.com mx
+$ dig -p 8053 @127.0.0.1 synrc.com spf
+$ dig -p 8053 @127.0.0.1 synrc.com txt
+$ dig -p 8053 @127.0.0.1 synrc.com sshfp
+$ dig -p 8053 @127.0.0.1 synrc.com soa
+$ dig -p 8053 @127.0.0.1 synrc.com naptr
 ```
 
 ## Application Dependencies
