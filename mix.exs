@@ -4,9 +4,9 @@ defmodule NS.Mixfile do
   def project() do
     [
       app: :erldns,
-      version: "0.10.0",
+      version: "1.6.1",
       elixir: "~> 1.7",
-      description: "NS Name Server",
+      description: "NS SYNRC Name Server",
       package: package(),
       deps: deps()
     ]
@@ -14,7 +14,7 @@ defmodule NS.Mixfile do
 
   def package do
     [
-      files: ~w(include priv src mix.exs LICENSE),
+      files: ~w(config include priv src mix.exs erldns.config rebar.config LICENSE CNAME REDAME.md index.html),
       licenses: ["ISC"],
       maintainers: ["Namdak Tonpa"],
       name: :ns,
@@ -37,12 +37,11 @@ defmodule NS.Mixfile do
       {:ex_doc, "~> 0.11", only: :dev},
       {:dnssec, "~> 0.1.2"},
       {:lager, "~> 3.9.2"},
-      {:recon, "~> 2.5.3"},
       {:folsom, "~> 1.0.0"},
       {:jsx, "~> 3.0.0"},
       {:nodefinder, "~> 2.0.0"},
-      {:opentelemetry_api, "~> 0.6.0"},
-      {:meck, "~> 0.9.2"}
+      {:opentelemetry_api, "~> 0.6.0"}
     ]
   end
+
 end
