@@ -4,9 +4,9 @@ defmodule NS.Mixfile do
   def project() do
     [
       app: :ns,
-      version: "1.6.2",
+      version: "1.6.3",
       elixir: "~> 1.7",
-      description: "NS SYNRC Name Server",
+      description: "NS Authoritative Name Server",
       package: package(),
       deps: deps()
     ]

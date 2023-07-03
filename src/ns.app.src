@@ -1,6 +1,6 @@
 {application, ns,
  [{description, "NS Authoritative Name Server"},
-  {vsn, "1.6.2"},
+  {vsn, "1.6.3"},
   {licenses, ["MIT"]},
   {mod, { erldns_app, []}},
   {applications, [kernel, stdlib, inets, crypto, lager, dnssec, jsx, ssl, mnesia,
