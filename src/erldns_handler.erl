@@ -173,7 +173,7 @@ handle_packet_cache_miss(Message, AuthorityRecords, Host) ->
 
 -spec safe_handle_packet_cache_miss(Message :: dns:message(), AuthorityRecords :: dns:authority(), Host :: dns:ip()) -> dns:message().
 safe_handle_packet_cache_miss(Message, AuthorityRecords, Host) ->
-    case application:get_env(erldns, catch_exceptions) of
+    case application:get_env(ns, catch_exceptions) of
         {ok, false} ->
             Response = erldns_resolver:resolve(Message, AuthorityRecords, Host),
             maybe_cache_packet(Response, Response#dns_message.aa);

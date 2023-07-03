@@ -34,14 +34,14 @@ start(_Type, _Args) ->
 start_phase(post_start, _StartType, _PhaseArgs) ->
     erldns_events:add_handler(erldns_event_handler),
 
-    case application:get_env(erldns, custom_zone_parsers) of
+    case application:get_env(ns, custom_zone_parsers) of
         {ok, Parsers} ->
             erldns_zone_parser:register_parsers(Parsers);
         _ ->
             ok
     end,
 
-    case application:get_env(erldns, custom_zone_encoders) of
+    case application:get_env(ns, custom_zone_encoders) of
         {ok, Encoders} ->
             erldns_zone_encoder:register_encoders(Encoders);
         _ ->

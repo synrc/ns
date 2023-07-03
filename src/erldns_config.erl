@@ -65,7 +65,7 @@
 -define(DEFAULT_TCP_PROCESS_TIMEOUT, 1000).
 
 get_servers() ->
-    case application:get_env(erldns, servers) of
+    case application:get_env(ns, servers) of
         {ok, Servers} ->
             lists:map(fun(Server) ->
                          [{name, keyget(name, Server)},
@@ -112,14 +112,14 @@ get_servers_multiple_servers_test() ->
 %% IPv6 default: ::1
 -spec get_address(inet | inet6) -> inet:ip_address().
 get_address(inet) ->
-    case application:get_env(erldns, inet4) of
+    case application:get_env(ns, inet4) of
         {ok, Address} ->
             parse_address(Address);
         _ ->
             ?DEFAULT_IPV4_ADDRESS
     end;
 get_address(inet6) ->
-    case application:get_env(erldns, inet6) of
+    case application:get_env(ns, inet6) of
         {ok, Address} ->
             parse_address(Address);
         _ ->
@@ -131,7 +131,7 @@ get_address(inet6) ->
 %% Default: 53
 -spec get_port() -> inet:port_number().
 get_port() ->
-    case application:get_env(erldns, port) of
+    case application:get_env(ns, port) of
         {ok, Port} ->
             Port;
         _ ->
@@ -143,7 +143,7 @@ get_port() ->
 %% Default: 10
 -spec get_num_workers() -> non_neg_integer().
 get_num_workers() ->
-    case application:get_env(erldns, num_workers) of
+    case application:get_env(ns, num_workers) of
         {ok, NumWorkers} ->
             NumWorkers;
         _ ->
@@ -152,7 +152,7 @@ get_num_workers() ->
 
 -spec use_root_hints() -> boolean().
 use_root_hints() ->
-    case application:get_env(erldns, use_root_hints) of
+    case application:get_env(ns, use_root_hints) of
         {ok, Flag} ->
             Flag;
         _ ->
@@ -160,7 +160,7 @@ use_root_hints() ->
     end.
 
 packet_cache() ->
-    application:get_env(erldns, packet_cache, []).
+    application:get_env(ns, packet_cache, []).
 
 packet_cache_enabled() ->
     keyget(enabled, packet_cache(), true).
@@ -188,7 +188,7 @@ keyget(Key, Data, Default) ->
 %% Zone server configuration
 %% TODO: remove as zone server client logic has been removed
 zone_server_env() ->
-    {ok, ZoneServerEnv} = application:get_env(erldns, zone_server),
+    {ok, ZoneServerEnv} = application:get_env(ns, zone_server),
     ZoneServerEnv.
 
 zone_server_max_processes() ->
@@ -249,7 +249,7 @@ storage_get(Key) ->
 
 -spec ingress_udp_request_timeout() -> non_neg_integer().
 ingress_udp_request_timeout() ->
-    case application:get_env(erldns, ingress_udp_request_timeout) of
+    case application:get_env(ns, ingress_udp_request_timeout) of
         {ok, UdpTimeout} ->
             UdpTimeout;
         _ ->
@@ -258,7 +258,7 @@ ingress_udp_request_timeout() ->
 
 -spec ingress_tcp_request_timeout() -> non_neg_integer().
 ingress_tcp_request_timeout() ->
-    case application:get_env(erldns, ingress_tcp_request_timeout) of
+    case application:get_env(ns, ingress_tcp_request_timeout) of
         {ok, TcpTimeout} ->
             TcpTimeout;
         _ ->
@@ -282,7 +282,7 @@ get_env_value(Key, Name) ->
     end.
 
 get_env(storage) ->
-    case application:get_env(erldns, storage) of
+    case application:get_env(ns, storage) of
         undefined ->
             [{type, erldns_storage_json}, {dir, undefined}, {user, undefined}, {pass, undefined}, {host, undefined}, {port, undefined}];
         {ok, Env} ->

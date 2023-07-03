@@ -54,7 +54,7 @@ load_zones() ->
 
 % Internal API
 filename() ->
-    case application:get_env(erldns, zones) of
+    case application:get_env(ns, zones) of
         {ok, Filename} ->
             Filename;
         _ ->

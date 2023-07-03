@@ -28,7 +28,7 @@
 %% exception.
 -spec encode_message(dns:message()) -> dns:message_bin().
 encode_message(Response) ->
-    case application:get_env(erldns, catch_exceptions) of
+    case application:get_env(ns, catch_exceptions) of
         {ok, false} ->
             dns:encode_message(Response);
         _ ->
@@ -54,7 +54,7 @@ encode_message(Response) ->
                         {false, dns:message_bin(), dns:tsig_mac()} |
                         {true, dns:message_bin(), dns:tsig_mac(), dns:message()}.
 encode_message(Response, Opts) ->
-    case application:get_env(erldns, catch_exceptions) of
+    case application:get_env(ns, catch_exceptions) of
         {ok, false} ->
             dns:encode_message(Response, Opts);
         _ ->

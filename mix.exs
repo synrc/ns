@@ -14,7 +14,7 @@ defmodule NS.Mixfile do
 
   def package do
     [
-      files: ~w(config include priv src mix.exs erldns.config rebar.config LICENSE CNAME README.md index.html),
+      files: ~w(config include priv src mix.exs ns.config rebar.config LICENSE CNAME README.md index.html),
       licenses: ["ISC"],
       maintainers: ["Namdak Tonpa"],
       name: :ns,

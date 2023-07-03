@@ -183,7 +183,7 @@ load_zones(Filename) when is_list(Filename) ->
 %% Internal API
 %% @doc Get file name from env, or return default (copied from erldns_zone_loader.erl)
 filename() ->
-    case application:get_env(erldns, zones) of
+    case application:get_env(ns, zones) of
         {ok, Filename} ->
             io:format("SYNRC: Zone File Accessed~n"),
             Filename;

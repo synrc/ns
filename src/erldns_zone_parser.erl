@@ -250,7 +250,7 @@ apply_context_match_empty_check(_, _) ->
 apply_context_options([_, _, _, _, undefined]) ->
     pass;
 apply_context_options([_, _, _, _, Context]) ->
-    case application:get_env(erldns, context_options) of
+    case application:get_env(ns, context_options) of
         {ok, ContextOptions} ->
             ContextSet = sets:from_list(Context),
             Result =

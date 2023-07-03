@@ -27,7 +27,7 @@
 %% exception.
 -spec decode_message(dns:message_bin()) -> {dns:decode_error(), dns:message() | undefined, binary()} | dns:message().
 decode_message(Bin) ->
-    case application:get_env(erldns, catch_exceptions) of
+    case application:get_env(ns, catch_exceptions) of
         {ok, false} ->
             dns:decode_message(Bin);
         _ ->
