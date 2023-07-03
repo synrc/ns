@@ -1,6 +1,6 @@
 {application, ns,
- [{description, "NS Authoritative Name Server"},
-  {vsn, "1.6.3"},
+ [{description, "NS  CXC 138 23 Authoritative Name Server"},
+  {vsn, "1.6.4"},
   {licenses, ["MIT"]},
   {mod, { erldns_app, []}},
   {applications, [kernel, stdlib, inets, crypto, lager, dnssec, jsx, ssl, mnesia,
