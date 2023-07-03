@@ -3,8 +3,8 @@ defmodule NS.Mixfile do
 
   def project() do
     [
-      app: :erldns,
-      version: "1.6.1",
+      app: :ns,
+      version: "1.6.2",
       elixir: "~> 1.7",
       description: "NS SYNRC Name Server",
       package: package(),

@@ -30,7 +30,9 @@
 %% @doc Load zones from a file. The default file name is "zones.json".
 -spec load_zones() -> {ok, integer()} | {err, atom()}.
 load_zones() ->
-    case file:read_file(filename()) of
+    Zones = code:priv_dir(ns)++filename(),
+    io:format("Zones: ~p~n",[Zones]),
+    case file:read_file(code:priv_dir(ns)++filename()) of
         {ok, Binary} ->
             logger:notice("Parsing zones JSON~n",[]),
             JsonZones = jsx:decode(Binary, [{return_maps, false}]),

@@ -23,7 +23,7 @@
          stop/1]).
 
 start(_Type, _Args) ->
-    logger:add_handlers(erldns),
+    logger:add_handlers(ns),
     logger:notice("Starting erldns application.~n",[]),
     setup_metrics(),
     nodefinder:multicast_start(),
