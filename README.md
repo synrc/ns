@@ -2,7 +2,7 @@
 
 [![Hex pm](http://img.shields.io/hexpm/v/ns.svg?style=flat)](https://hex.pm/packages/ns)
 
-![NS](https://github.com/synrc/ns/assets/144776/6b35a3a8-3bf2-4059-9351-f449ff4d79b2)
+![NS](https://github.com/synrc/ns/assets/144776/1d9466a9-aca9-4a2c-a0df-56b5f2971ef2)
 
 
 ## Installation
