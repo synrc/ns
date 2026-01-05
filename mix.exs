@@ -4,9 +4,9 @@ defmodule NS.Mixfile do
   def project() do
     [
       app: :ns,
-      version: "1.6.4",
-      elixir: "~> 1.7",
+      version: "2.1.1",
       description: "NS  CXC 138 23 Authoritative Name Server",
+      releases: [ns: [include_executables_for: [:unix], cookie: "SYNRC:NS"]],
       package: package(),
       deps: deps()
     ]
@@ -28,7 +28,7 @@ defmodule NS.Mixfile do
       mod: {:erldns_app, []},
       applications: [:kernel,:stdlib,:inets,:syntax_tools,:compiler,:goldrush,:base32,:xmerl,
                      :ssl,:jsx,:crypto,:folsom,:mnesia,:dnssec,:lager,:bear,:opentelemetry_api,:nodefinder],
-      erl_opts: [parse_transform: 'lager_transform']
+      erl_opts: [parse_transform: ~c"lager_transform"]
     ]
   end
 
@@ -40,7 +40,7 @@ defmodule NS.Mixfile do
       {:folsom, "~> 1.0.0"},
       {:jsx, "~> 3.0.0"},
       {:nodefinder, "~> 2.0.0"},
-      {:opentelemetry_api, "~> 0.6.0"}
+      {:opentelemetry_api, "~> 1.5.0"}
     ]
   end
 

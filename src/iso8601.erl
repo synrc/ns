@@ -22,6 +22,8 @@
 
 -export_type([timestamp/0, year/0, month/0, day/0, hour/0, minute/0, second/0]).
 
+-type option(T) :: undefined | T.
+
 %% This group of types is from calendar.erl; we need to use some of them
 %% for this  lib, but thought it might be nice to provide the rest to users.
 -type year()     :: non_neg_integer().
@@ -35,7 +37,6 @@
                                        minute(),
                                        second() | float()}}.
 -type datetime_plist() :: list({atom(), integer()}).
--type maybe(A) :: undefined | A.
 -type timestamp() :: {MegaSecs::integer(),
                       Secs::integer(),
                       MicroSecs::integer() | float()}.
@@ -364,8 +365,8 @@ make_date(Plist) ->
     make_date(Year, ?V(month, Plist, 1), ?V(week, Plist), Plist).
 
 -spec make_date (non_neg_integer(),
-                 maybe(pos_integer()),
-                 maybe(pos_integer()),
+                 option(pos_integer()),
+                 option(pos_integer()),
                  datetime_plist())
                 -> {calendar:date(), non_neg_integer()}.
 %% @doc Return a `tuple' containing a date and - if the date is in week format
