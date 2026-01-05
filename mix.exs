@@ -26,7 +26,7 @@ defmodule NS.Mixfile do
     [
       start_phases: [{:post_start, []}],
       mod: {:erldns_app, []},
-      applications: [:kernel,:stdlib,:inets,:syntax_tools,:compiler,:goldrush,:base32,:xmerl,
+      extra_applications: [:kernel,:stdlib,:inets,:syntax_tools,:compiler,:goldrush,:base32,:xmerl,
                      :ssl,:jsx,:crypto,:folsom,:mnesia,:dnssec,:lager,:bear,:opentelemetry_api,:nodefinder],
       erl_opts: [parse_transform: ~c"lager_transform"]
     ]
@@ -34,7 +34,7 @@ defmodule NS.Mixfile do
 
   def deps() do
     [
-      {:ex_doc, "~> 0.11", only: :dev},
+      {:ex_doc, ">= 0.0.0", only: :dev},
       {:dnssec, "~> 0.1.2"},
       {:lager, "~> 3.9.2"},
       {:folsom, "~> 1.0.0"},
