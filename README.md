@@ -1,9 +1,7 @@
 # SYNRC 🔒 NS
 
-[![Hex pm](http://img.shields.io/hexpm/v/ns.svg?style=flat)](https://hex.pm/packages/ns)
-
-![NS2](https://github.com/synrc/ns/assets/144776/eff90813-30a2-47ae-86d6-5da154223b64)
-
+[![Actions Status](https://github.com/synrc/ns/workflows/mix/badge.svg)](https://github.com/synrc/ns/actions)
+[![Hex pm](https://img.shields.io/hexpm/v/ns.svg?style=flat)](https://hex.pm/packages/ns)
 
 ## Installation
 
